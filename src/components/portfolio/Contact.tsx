@@ -7,7 +7,6 @@ import { Section } from "./Section";
 const schema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100),
   email: z.string().trim().email("Invalid email").max(255),
-  subject: z.string().trim().min(1, "Subject is required").max(150),
   message: z.string().trim().min(5, "Message is too short").max(1500),
 });
 
@@ -19,7 +18,7 @@ const socials = [
 ];
 
 export function Contact() {
-  const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [sent, setSent] = useState(false);
 
@@ -37,12 +36,12 @@ export function Contact() {
     setErrors({});
     const body = `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`;
     const mailto = `mailto:joelkirubainathan@gmail.com?subject=${encodeURIComponent(
-      form.subject,
+      "Portfolio Contact",
     )}&body=${encodeURIComponent(body)}`;
     window.location.href = mailto;
     setSent(true);
     setTimeout(() => setSent(false), 4000);
-    setForm({ name: "", email: "", subject: "", message: "" });
+    setForm({ name: "", email: "", message: "" });
   };
 
   const field = (name: keyof typeof form, label: string, type = "text") => (
@@ -67,8 +66,8 @@ export function Contact() {
     <Section
       id="contact"
       eyebrow="CONTACT"
-      title="Let's Work Together"
-      subtitle="Let's connect and build a safer digital future."
+      title="Get In Touch"
+      subtitle="Let's connect and build something great together."
     >
       <div className="grid lg:grid-cols-5 gap-8">
         <motion.form
@@ -82,7 +81,6 @@ export function Contact() {
             {field("name", "Name")}
             {field("email", "Email", "email")}
           </div>
-          {field("subject", "Subject")}
           <div>
             <label className="block text-xs font-mono text-cyber-muted tracking-widest mb-2">
               MESSAGE
@@ -92,7 +90,7 @@ export function Contact() {
               value={form.message}
               onChange={(e) => setForm({ ...form, message: e.target.value })}
               className="w-full glass rounded-lg px-4 py-3 text-sm text-white placeholder:text-cyber-muted/50 focus:outline-none focus:border-cyber focus:cyber-glow transition resize-none"
-              placeholder="Tell me about the opportunity..."
+              placeholder="Your message..."
             />
             {errors.message && (
               <p className="mt-1 text-xs text-red-400">{errors.message}</p>
@@ -124,12 +122,11 @@ export function Contact() {
         >
           <div className="glass rounded-2xl p-6">
             <h3 className="text-lg font-semibold text-white mb-2">
-              Open to Opportunities
+              Let's Connect
             </h3>
             <p className="text-sm text-cyber-muted">
-              Actively seeking SOC Analyst, Security Analyst, or Cybersecurity
-              Analyst roles. Let's talk about how I can contribute to your
-              security team.
+              I'm always interested in new opportunities and exciting projects.
+              Whether you have a question or just want to say hi, feel free to reach out!
             </p>
           </div>
           {socials.map((s) => (
