@@ -1,56 +1,45 @@
 import { useState } from "react";
 import { motion } from "motion/react";
-import { Github, ExternalLink, ShieldAlert, Radar, FileSearch, Network } from "lucide-react";
+import { Github, ExternalLink, Calendar, TrendingUp, Recycle } from "lucide-react";
 import { Section } from "./Section";
 
 const projects = [
   {
-    title: "Network Vulnerability Scanner",
-    icon: ShieldAlert,
-    category: "Security",
+    title: "Time Table Management System",
+    icon: Calendar,
+    category: "Web Development",
     description:
-      "Python-based tool for identifying network vulnerabilities and generating actionable security reports.",
-    tech: ["Python", "Nmap", "Socket", "Reporting"],
-    features: ["Service detection", "CVE mapping", "PDF reports"],
+      "A full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, payment integration, and admin dashboard.",
+    tech: ["React", "Node.js", "MYSQL"],
+    features: ["User authentication", "Payment integration", "Admin dashboard"],
     github: "#",
     demo: "#",
   },
   {
-    title: "Port Scanner",
-    icon: Radar,
-    category: "Reconnaissance",
+    title: "Crypto Market Tracker",
+    icon: TrendingUp,
+    category: "Web Application",
     description:
-      "Python port scanner for network reconnaissance and security assessment with multi-threading.",
-    tech: ["Python", "Threading", "Sockets"],
-    features: ["TCP/UDP scan", "Banner grabbing", "Fast multi-threaded"],
+      "A responsive weather application with real-time data, forecasts, and beautiful animations built with React and OpenWeather API.",
+    tech: ["React", "CoinGecko API", "API Integration"],
+    features: ["Real-time data", "Forecasts", "Responsive design"],
     github: "#",
     demo: "#",
   },
   {
-    title: "Security Log Analyzer",
-    icon: FileSearch,
-    category: "Monitoring",
+    title: "E-Waste Management System",
+    icon: Recycle,
+    category: "Web Design",
     description:
-      "Automated log analysis solution for detecting suspicious activities and surfacing security events.",
-    tech: ["Python", "Regex", "Pandas"],
-    features: ["Anomaly detection", "Alerting", "Dashboard export"],
-    github: "#",
-    demo: "#",
-  },
-  {
-    title: "Packet Analysis Lab",
-    icon: Network,
-    category: "Network",
-    description:
-      "Used Wireshark to dissect network traffic, identify protocol anomalies and potential threats.",
-    tech: ["Wireshark", "TCP/IP", "PCAP"],
-    features: ["Deep packet inspection", "Threat hunting", "Lab writeups"],
+      "A modern portfolio website with 3D animations, particle effects, and smooth transitions using Three.js and Framer Motion.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    features: ["3D animations", "Particle effects", "Smooth transitions"],
     github: "#",
     demo: "#",
   },
 ];
 
-const filters = ["All", "Security", "Reconnaissance", "Monitoring", "Network"];
+const filters = ["All", "Web Development", "Web Application", "Web Design"];
 
 export function Projects() {
   const [active, setActive] = useState("All");
@@ -61,8 +50,8 @@ export function Projects() {
     <Section
       id="projects"
       eyebrow="PROJECTS"
-      title="Featured Security Projects"
-      subtitle="Hands-on builds spanning threat detection, automation, and network analysis."
+      title="My Projects"
+      subtitle="Hands-on builds spanning web development, API integration, and creative design."
     >
       <div className="flex flex-wrap justify-center gap-2 mb-10">
         {filters.map((f) => (
@@ -83,7 +72,7 @@ export function Projects() {
         ))}
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filtered.map((p, i) => (
           <motion.article
             key={p.title}
