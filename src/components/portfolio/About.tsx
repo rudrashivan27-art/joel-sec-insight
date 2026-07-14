@@ -8,18 +8,16 @@ const info = [
   { icon: Mail, label: "Email", value: "joelkirubainathan@gmail.com" },
 ];
 
-const interests = [
-  "SOC Analyst",
-  "Security Analyst",
-  "Cybersecurity Analyst",
-  "Threat Detection",
-  "Vulnerability Assessment",
-  "Incident Response",
+const tags = [
+  "React",
+  "MY SQL",
+  "Python",
+  "Dart",
 ];
 
 export function About() {
   return (
-    <Section id="about" eyebrow="ABOUT_ME" title="Defending the Digital Frontier">
+    <Section id="about" eyebrow="ABOUT_ME" title="Profile">
       <div className="grid lg:grid-cols-5 gap-8">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
@@ -47,36 +45,30 @@ export function About() {
                 Joel Kirubainathan
               </div>
               <div className="text-sm text-cyber-muted mt-0.5">
-                Cybersecurity Analyst · ISC2 Candidate
+                Final-year Student · Developer & Designer
               </div>
             </div>
           </div>
           <p className="text-cyber-muted leading-relaxed text-lg">
-            I am an aspiring{" "}
-            <span className="text-cyber-primary font-medium">
-              cybersecurity professional
-            </span>{" "}
-            with a strong interest in network security, threat detection,
-            vulnerability management, and Python automation. As an{" "}
-            <span className="text-cyber-primary font-medium">ISC2 Candidate</span>
-            , I continuously enhance my knowledge of cybersecurity principles
-            and industry best practices.
+            Final-year student passionate about technology and design. Familiar with
+            Unix/Linux basics and system commands. Proficient in MS Office tools and
+            Canva for visual content. Hands-on experience in web development and
+            UI/UX using Figma.
           </p>
           <p className="mt-5 text-cyber-muted leading-relaxed">
-            My goal is to contribute to secure digital environments while
-            growing as a cybersecurity analyst — bridging technical depth with
-            real-world security operations.
+            Currently exploring networking and IoT concepts. Known for a problem-solving
+            mindset and adaptability. Eager to learn and contribute to real-world projects.
           </p>
 
           <div className="mt-8">
             <div className="flex items-center gap-2 mb-4">
               <Target className="h-4 w-4 text-cyber-primary" />
               <span className="font-mono text-sm text-cyber-primary">
-                CAREER_INTERESTS
+                TECHNOLOGIES
               </span>
             </div>
             <div className="flex flex-wrap gap-2">
-              {interests.map((t) => (
+              {tags.map((t) => (
                 <span
                   key={t}
                   className="glass rounded-full px-3 py-1 text-xs text-white border border-cyber-glass-border hover:border-cyber hover:text-cyber-primary transition-all"

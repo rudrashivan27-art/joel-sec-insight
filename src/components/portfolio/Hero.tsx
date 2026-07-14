@@ -3,10 +3,10 @@ import { motion } from "motion/react";
 import { Download, Mail, Terminal, Lock, Wifi, Cpu } from "lucide-react";
 
 const ROLES = [
-  "Cybersecurity Fresher",
-  "ISC2 Candidate",
+  "Web Developer",
+  "UI/UX Designer",
   "Python Programmer",
-  "Network Security Enthusiast",
+  "Problem Solver",
 ];
 
 function Typewriter() {
@@ -84,10 +84,9 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight"
+          className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white"
         >
-          <span className="text-white">Joel</span>{" "}
-          <span className="cyber-gradient-text">Kirubainathan</span>
+          JOEL KIRUBAINATHAN
         </motion.h1>
 
         <motion.div
@@ -105,11 +104,8 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.5 }}
           className="mx-auto mt-8 max-w-2xl text-cyber-muted leading-relaxed"
         >
-          Passionate cybersecurity enthusiast dedicated to protecting digital
-          assets through network security, threat analysis, and secure
-          programming practices. Continuously learning and building practical
-          cybersecurity skills to contribute effectively to modern security
-          operations.
+          Focused on professional growth and crafting innovative digital solutions.
+          I enjoy building responsive web experiences, clean interfaces, and practical tools that solve real problems.
         </motion.p>
 
         <motion.div
@@ -119,13 +115,12 @@ export function Hero() {
           className="mt-10 flex flex-wrap items-center justify-center gap-4"
         >
           <a
-            href="/resume.pdf"
-            download
+            href="#projects"
             className="group inline-flex items-center gap-2 rounded-md px-6 py-3 text-sm font-medium text-[#0A0F1C] transition-all hover:scale-105 cyber-glow"
             style={{ background: "var(--gradient-cyber)" }}
           >
             <Download className="h-4 w-4 group-hover:-translate-y-0.5 transition-transform" />
-            Download Resume
+            Explore Portfolio
           </a>
           <a
             href="#contact"

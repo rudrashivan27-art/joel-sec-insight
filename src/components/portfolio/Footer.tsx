@@ -7,10 +7,10 @@ export function Footer() {
         <div className="flex items-center gap-2 font-mono text-sm">
           <Shield className="h-4 w-4 text-cyber-primary" />
           <span className="text-white">JOEL</span>
-          <span className="text-cyber-primary">.SECOPS</span>
+          <span className="text-cyber-primary">.KIRUBAINATHAN</span>
         </div>
         <p className="text-xs text-cyber-muted">
-          © {new Date().getFullYear()} Joel Kirubainathan. All rights reserved.
+          © {2026} Joel Kirubainathan. All rights reserved.
         </p>
         <p className="text-[10px] font-mono text-cyber-muted/60">
           STATUS: <span className="text-green-400">SECURE</span>

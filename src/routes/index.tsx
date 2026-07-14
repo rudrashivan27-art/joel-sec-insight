@@ -4,42 +4,39 @@ import { Navbar } from "@/components/portfolio/Navbar";
 import { Hero } from "@/components/portfolio/Hero";
 import { About } from "@/components/portfolio/About";
 import { Skills } from "@/components/portfolio/Skills";
-import { Certifications } from "@/components/portfolio/Certifications";
-
-import { Experience } from "@/components/portfolio/Experience";
-import { Education } from "@/components/portfolio/Education";
-
+import { Projects } from "@/components/portfolio/Projects";
+import { Resume } from "@/components/portfolio/Resume";
 import { Contact } from "@/components/portfolio/Contact";
 import { Footer } from "@/components/portfolio/Footer";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Joel Kirubainathan | Cybersecurity Portfolio" },
+      { title: "Joel Kirubainathan | Portfolio" },
       {
         name: "description",
         content:
-          "Cybersecurity Fresher, ISC2 Candidate, Python Programmer, and Network Security Enthusiast. Explore projects, skills, certifications, and cybersecurity expertise.",
+          "Portfolio of Joel Kirubainathan — final-year student, developer, and designer focused on professional growth and innovative digital solutions.",
       },
       {
         name: "keywords",
         content:
-          "Cybersecurity Portfolio, SOC Analyst, Security Analyst, ISC2 Candidate, Python Programmer, Network Security, Vulnerability Assessment, Cybersecurity Fresher",
+          "Joel Kirubainathan, Portfolio, Web Developer, UI/UX Designer, React, Python, Figma",
       },
       { name: "author", content: "Joel Kirubainathan" },
-      { property: "og:title", content: "Joel Kirubainathan | Cybersecurity Portfolio" },
+      { property: "og:title", content: "Joel Kirubainathan | Portfolio" },
       {
         property: "og:description",
         content:
-          "Cybersecurity Fresher, ISC2 Candidate, Python Programmer, and Network Security Enthusiast.",
+          "Final-year student, developer, and designer focused on professional growth and innovative digital solutions.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Joel Kirubainathan | Cybersecurity Portfolio" },
+      { name: "twitter:title", content: "Joel Kirubainathan | Portfolio" },
       {
         name: "twitter:description",
         content:
-          "Cybersecurity Fresher, ISC2 Candidate, Python Programmer, and Network Security Enthusiast.",
+          "Final-year student, developer, and designer focused on professional growth and innovative digital solutions.",
       },
     ],
     links: [{ rel: "canonical", href: "/" }],
@@ -50,9 +47,9 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "Person",
           name: "Joel Kirubainathan",
-          jobTitle: "Cybersecurity Analyst",
+          jobTitle: "Developer & Designer",
           description:
-            "Cybersecurity Fresher, ISC2 Candidate, Python Programmer, Network Security Enthusiast",
+            "Final-year student passionate about technology and design",
         }),
       },
     ],
@@ -69,10 +66,8 @@ function Index() {
         <Hero />
         <About />
         <Skills />
-        <Certifications />
-        <Experience />
-        <Education />
-        
+        <Projects />
+        <Resume />
         <Contact />
       </main>
       <Footer />
