@@ -1,62 +1,44 @@
 import { motion } from "motion/react";
-import { Shield, Network, Code2, Wrench } from "lucide-react";
+import { Code2, Database, Palette } from "lucide-react";
 import { Section } from "./Section";
 
 const groups = [
   {
-    title: "Cybersecurity",
-    icon: Shield,
-    items: [
-      ["Security Operations (SOC)", 80],
-      ["Network Security", 85],
-      ["Threat Analysis", 78],
-      ["Vulnerability Assessment", 80],
-      ["Incident Response", 72],
-      ["Security Monitoring", 78],
-      ["SIEM Fundamentals", 70],
-      ["Risk Management", 72],
-    ] as [string, number][],
-  },
-  {
-    title: "Networking",
-    icon: Network,
-    items: [
-      ["TCP/IP", 88],
-      ["DNS / DHCP", 85],
-      ["Routing & Switching", 80],
-      ["Network Troubleshooting", 82],
-      ["Firewall Concepts", 78],
-    ] as [string, number][],
-  },
-  {
-    title: "Programming",
+    title: "Development",
     icon: Code2,
     items: [
-      ["Python", 88],
-      ["Bash Scripting", 78],
-      ["Automation", 82],
-      ["API Integration", 75],
+      ["React", 60],
+      ["TypeScript", 65],
+      ["Python", 90],
+      ["HTML5", 90],
+      ["CSS3", 85],
+      ["Dart", 65],
     ] as [string, number][],
   },
   {
-    title: "Tools",
-    icon: Wrench,
+    title: "Database & Backend",
+    icon: Database,
     items: [
-      ["Wireshark", 82],
-      ["Nmap", 85],
-      ["Burp Suite", 70],
-      ["Nessus", 70],
-      ["Kali Linux", 80],
-      ["Linux Administration", 78],
-      ["Windows Security Tools", 75],
+      ["MY SQL", 80],
+      ["MongoDB", 55],
+      ["Node.js", 70],
+    ] as [string, number][],
+  },
+  {
+    title: "Design & Tools",
+    icon: Palette,
+    items: [
+      ["Figma", 95],
+      ["Canva", 75],
+      ["MS Office", 80],
     ] as [string, number][],
   },
 ];
 
 export function Skills() {
   return (
-    <Section id="skills" eyebrow="SKILLS" title="Technical Arsenal">
-      <div className="grid md:grid-cols-2 gap-6">
+    <Section id="skills" eyebrow="SKILLS" title="My Skills">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {groups.map((g, gi) => (
           <motion.div
             key={g.title}
