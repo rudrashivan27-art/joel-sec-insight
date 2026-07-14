@@ -6,8 +6,8 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-2 font-mono text-sm">
           <Shield className="h-4 w-4 text-cyber-primary" />
-          <span className="text-white">JOEL</span>
-          <span className="text-cyber-primary">.KIRUBAINATHAN</span>
+          <span className="text-white">JOEL.</span>
+          <span className="text-cyber-primary">SecOps</span>
         </div>
         <p className="text-xs text-cyber-muted">
           © {2026} Joel Kirubainathan. All rights reserved.
